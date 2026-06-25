@@ -49,7 +49,6 @@ func NotificationHandler(ctx context.Context, body []byte) error {
 // This is the Operation phase of the lifecycle for MCP client-server connections.
 func ProcessMethod(ctx context.Context, mcpVersion string, id jsonrpc.RequestId, method string, toolset tools.Toolset, promptset prompts.Promptset, resourceMgr *resources.ResourceManager, body []byte, header http.Header) (any, error) {
 	switch mcpVersion {
-<<<<<<< HEAD
 	case mcputil.VERSION_DRAFT:
 		return vdraft.ProcessMethod(ctx, id, method, toolset, promptset, resourceMgr, body, header)
 	case mcputil.VERSION_20251125:
